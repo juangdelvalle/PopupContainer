@@ -36,7 +36,7 @@ public class PopupContainer: UIView {
         UIDevice.current.beginGeneratingDeviceOrientationNotifications()
         NotificationCenter.default.addObserver(
             popupContainer,
-            selector: "interfaceOrientationChanged:",
+            selector: #selector(PopupContainer.interfaceOrientationChanged(notification:)),
             name: NSNotification.Name.UIDeviceOrientationDidChange,
             object: nil)
         
